@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
-import Giph from './Giph.js';
+import Gifs from './Gifs.js';
 
 class Search extends Component {
 
@@ -12,7 +12,6 @@ class Search extends Component {
 
 	fetchResults(props)
 	{
-		console.log(this.state.value);
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=X1bcZ3m4WswszHaa45Ws9uWklW6FdFN6&limit=20&offset=0&rating=G&lang=fr&q=`+this.state.value)
       .then(result=>result.json())
       .then(json =>{
@@ -32,7 +31,7 @@ class Search extends Component {
         <div className="block">
           <button type="submit" value="Submit" onClick={() => {this.fetchResults(this.state.searchQuery)}}>Submit</button>
         </div>
-        <Giph items={this.state.items}/>
+        <Gifs items={this.state.items}/>
       </div>
     );
   }
