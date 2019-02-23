@@ -15,7 +15,7 @@ class Search extends Component {
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=X1bcZ3m4WswszHaa45Ws9uWklW6FdFN6&limit=20&offset=0&rating=G&lang=fr&q=`+this.state.value)
       .then(result=>result.json())
       .then(json =>{
-         this.setState( {items : json.data} )
+         this.setState( {items : json.data})
       } 
     )
 	}

@@ -7,8 +7,8 @@ class Gifs extends Component {
     return (
       <div>
         { this.props.items.length > 0 &&
-          this.props.items.map(( { images }) => (
-              <Gif gif={images} key={images.preview_gif.url}/>
+          this.props.items.map(image => (
+              <Gif gif={image} key={image.images.preview_gif.url}/>
           ))
         }
       </div>

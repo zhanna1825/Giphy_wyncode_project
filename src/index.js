@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Search from './Search';
+import View from './View';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 const Root = () => {
@@ -9,7 +10,7 @@ const Root = () => {
       <BrowserRouter>
         <div>
           <Route exact path="/" component={ Search } />
-          {/* <Route path="/weather/:weatherId" component={ WeatherApp } /> */}
+          <Route path="/view" component={ View } /> 
         </div>
       </BrowserRouter>
     )
