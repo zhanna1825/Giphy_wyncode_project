@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import Gif from './Gif.js'
 import './index.css';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-class Gifs extends Component {
-  render() {
+const Gifs = (props) => {
     return (
-      <div>
-        { this.props.items.length > 0 &&
-          this.props.items.map(image => (
+      <div className="testing">
+        { props.items.length > 0 &&
+          props.items.map(image => (
               <Gif gif={image} key={image.images.preview_gif.url}/>
           ))
         }
       </div>
-    );
+    )
   }
-}
 
 export default Gifs;

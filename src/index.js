@@ -10,12 +10,10 @@ const Root = () => {
       <BrowserRouter>
         <div>
           <Route exact path="/" component={ Search } />
-          <Route path="/view" component={ View } /> 
+          <Route path="/view" component={ View } />
         </div>
       </BrowserRouter>
     )
    }
-   
-
 
 ReactDOM.render(<Root />, document.getElementById('root'));

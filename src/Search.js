@@ -16,7 +16,7 @@ class Search extends Component {
       .then(result=>result.json())
       .then(json =>{
          this.setState( {items : json.data})
-      } 
+      }
     )
 	}
 
@@ -24,10 +24,13 @@ class Search extends Component {
        this.setState({value: event.target.value});
     }
 
+    // WE BIND THIS, BECAUSE WHEN WE USE EVENT HANDLERS, THE CONTEXT OF "THIS" GETS LOST. HOWEVER, WHEN WE BIND, WE RETAIN TO ABILITY TO PASS IT CALLBACKS
+
   render() {
     return (
       <div>
-        <input type="text" placeholder="Search..." id="search" value={this.state.value} onChange={this.handleChange}/>
+        <h1> Welcome to Giphy World!!!</h1>
+        <input type="text" placeholder="   Search..." id="search" value={this.state.value} onChange=  {this.handleChange}/>
         <div className="block">
           <button type="submit" value="Submit" onClick={() => {this.fetchResults(this.state.searchQuery)}}>Submit</button>
         </div>
