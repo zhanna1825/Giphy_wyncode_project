@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import Search from './Search';
 import View from './View';
 import { BrowserRouter, Route } from 'react-router-dom';
+import './index.css';
 
 const Root = () => {
     return (
